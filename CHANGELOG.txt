@@ -1,0 +1,22 @@
+EMPÍRE PORTAL — CHANGELOG 1.2.0
+
+- Preserved the original EMPÍRE dashboard HTML, branding, layout, styles,
+  background/GIF artwork, navigation, service form, and existing panels.
+- Restored the intended dynamic-token flow: each request uses the bot token
+  currently pasted into the original token field.
+- Removed the newly introduced mandatory Firebase Admin/Staff session check
+  from the main bot service API calls.
+- Removed server-side Firebase UID allowlists from the bot-service endpoint.
+- Kept Firebase sign-in for the separate Admin/Staff management panels.
+- Kept optional audit logging; it is skipped when no Firebase user is signed in.
+- Added request size and action validation, token normalization, Discord
+  status-specific errors, one retry for 429 responses, and channel/server
+  ownership checks for send-message and delete-channel actions.
+- The bot token is not persisted, logged, or returned in API responses.
+- Kept the endpoint limited to the supported action list; it is not a generic
+  Discord API proxy.
+
+- Fixed EdgeOne CORS handling: no longer compares browser Origin to request.url
+  (which may be an internal EdgeOne hostname). OPTIONS and POST responses now
+  return matching Access-Control-Allow-Origin and required preflight headers.
+- Preserved dynamic per-request bot token flow and no-login core services.

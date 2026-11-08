@@ -1,0 +1,22 @@
+LOCAL TEST REPORT
+=================
+
+Passed locally:
+- Backend JavaScript syntax check (node --check).
+- Frontend module/script syntax extraction check.
+- Required API exports exist: onRequestGet, onRequestOptions, onRequestPost.
+- API source contains no Firebase ID-token / Admin UID / Staff UID gate.
+- Frontend bot service calls do not request Firebase login tokens.
+- Frontend retains separate Admin/Staff sign-in panel handlers.
+- Dynamic botToken and server fields are submitted to /api/discord.
+- Token is not written to console, response payload, or persistent storage.
+
+Not tested here:
+- Actual Tencent EdgeOne deployment/runtime.
+- Live Discord token validation or real server actions.
+- Firebase optional audit writes or Admin/Staff panels.
+
+Live integration tests must be run after deployment using a bot and server
+you own or are authorized to administer. Start with Validate Token and a
+non-destructive test. Do not treat local syntax checks as proof of live API
+connectivity.

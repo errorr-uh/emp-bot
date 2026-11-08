@@ -1,0 +1,7 @@
+{
+  "name": "empire-bot-control-portal",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "EMPÍRE Bot Control Portal API for Tencent EdgeOne Makers"
+}

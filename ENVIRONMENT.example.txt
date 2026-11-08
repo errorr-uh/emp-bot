@@ -1,0 +1,15 @@
+EMPÍRE PORTAL — ENVIRONMENT CONFIGURATION
+
+Main bot-service API:
+- No BOT_TOKEN required. Paste a Bot Token in the dashboard for each request.
+- No ALLOWED_GUILD_IDS required. Enter the Discord Server ID in the dashboard.
+- No Firebase Admin SDK credentials required for bot service execution.
+- No Admin/Staff Firebase sign-in required to run main bot services.
+
+Optional existing dashboard panels/audit:
+- Firebase Web App configuration is already embedded in index.html.
+- Configure Firebase Authentication and Firestore only if you want the
+  separate Admin/Staff panels and optional audit logging to work.
+
+Never place a Discord bot token, Firebase private key, or account password in
+this file or commit secrets to GitHub.
